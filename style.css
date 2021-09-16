@@ -43,17 +43,29 @@ h1 {
 }
 
 #search {
-  font-size: 16px;
+  font-size: 1rem;
   color: purple;
   border: none;
   background-color: lightblue;
-  border-radius: 5px;
-  width: 10rem;
+  border-radius: 0.5rem;
+  width: 14rem;
   height: 2rem;
+  padding: 1rem;
 }
 
 ::placeholder {
   color: grey;
   text-align: left;
-  padding-left: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.stat-section {
+  background-color: #141311;
+  width: 10rem;
+  margin-left: 4rem;
+  padding: 2rem;
+  border-radius: 2rem;
 }

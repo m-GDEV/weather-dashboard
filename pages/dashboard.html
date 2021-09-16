@@ -2,7 +2,7 @@
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
   </head>
 
 
@@ -20,11 +20,13 @@
   </nav>
 
 
+<div class="stat-section">
 
-<div class="content">
- <h1>Welcome! 👋 Please enter your city:</h1>
-  <input id="search" placeholder="Search Now" type="text" autocomplete="off" autofocus required>
+	<h2> Stat </h2>
+	<p> Information </p>
+
 </div>
+
 
 
 
@@ -32,20 +34,21 @@
 
 </body>
 
-<script>
-document.getElementById('search').onkeydown = function(e){
-   if(e.keyCode == 13){
 
-     let city = document.getElementById('search').value;
-     alert(city);
 
-    localStorage.setItem("city", `${city}`);
-    console.log(localStorage.getItem("city"));
 
-     document.location.href = "pages/dashboard.html";
-   }
-};
-</script>
+
+
+
+<!--<script>-->
+	<!--function load() {-->
+		<!--alert(localStorage.getItem("city"));-->
+	<!--}-->
+
+	<!--window.onload = load;-->
+<!--</script>-->
+
 
 </html>
+
 

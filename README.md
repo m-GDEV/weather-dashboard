@@ -12,3 +12,22 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 - Displays current temperature and humidex
 - Displays rain and winds information
 - Displays forecast for rest of day OR the next 10 days
+
+
+# Features to add
+- footer
+  - made with react?
+  - made by musa 
+- header 
+  - logo
+  - popular cities
+  - about
+  - contact
+- dashboard page
+  - h1 that says weather dashboard
+  - info card
+    - cur temp
+    - humidex/feels like
+    - rain
+    - wind
+  - tabbed section with forecast for day OR forecst for next 10 days
