@@ -3,15 +3,34 @@
   padding: 0;
   font-size: 16px;
   font-family: helvetica, arial;
+  box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  :root {
+    font-size: 12px;
+  }
+  .nav-item {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  :root {
+    font-size: 8px;
+  }
 }
 
 body {
 	background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  height: 94vh;
 }
 
 .top-nav {
   /*border: 1px solid black;*/
-  display: flex;
+  display: none; /* Should be flex, change when you need it */
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -48,7 +67,7 @@ h1 {
   border: none;
   background-color: lightblue;
   border-radius: 0.5rem;
-  width: 14rem;
+  /*width: 14rem;*/
   height: 2rem;
   padding: 1rem;
 }
@@ -62,10 +81,57 @@ input:focus {
   outline: none;
 }
 
+#dashboard-greeting {
+  margin-bottom: 4rem;
+}
+
+#invalid-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#invalid-button, #invalid-button a {
+  text-decoration: none;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: purple;
+  color: white;
+  font-size: 2rem;
+  border-radius: 2rem;
+  border: none;
+  
+}
+
+.grid {
+  display: grid;
+  border: 1px solid white;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem;
+  box-sizing: border-box;
+}
+
+.grid-item {
+ color: blue; 
+}
+
 .stat-section {
   background-color: #141311;
-  width: 10rem;
-  margin-left: 4rem;
+  color: white;
+  /*width: 30rem;*/
+  height: 10rem;
   padding: 2rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+}
+
+.big-stat-section {
+  background-color: #141311;
+  color: white;
+  /*width: 30rem;*/
+  height: 20rem;
+  padding: 4rem 4rem 4.5rem 4rem; /* Weird padding that aligns it with .stat-section */
+  margin: 0.5rem;
   border-radius: 2rem;
 }

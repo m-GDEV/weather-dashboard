@@ -1,10 +1,13 @@
-<html>
-
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <title>Weather Dashboard</title>
+</head>
 
 <body>
  
@@ -33,15 +36,15 @@
 </body>
 
 <script>
+// if enter key is pressed do:
 document.getElementById('search').onkeydown = function(e){
    if(e.keyCode == 13){
-
+// get value of input and assign it to city var
      let city = document.getElementById('search').value;
-     alert(city);
-
+// store city var in local storage
     localStorage.setItem("city", `${city}`);
     console.log(localStorage.getItem("city"));
-
+// navigate to dashboard page
      document.location.href = "pages/dashboard.html";
    }
 };

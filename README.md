@@ -31,3 +31,16 @@ without having to forego your privacy in the process (ip tracking, logging etc).
     - rain
     - wind
   - tabbed section with forecast for day OR forecst for next 10 days
+  - switch between farenheit and celsius
+
+
+# Weather Stats to include
+- City name
+- Country
+- Sunrise & Sunset
+- Current weather (clear sky, cloudy etc.)
+- Current temp
+- Temp high & low
+- Humidity (not sure what this value represents exactly)
+- Feels like
+- Wind speed
