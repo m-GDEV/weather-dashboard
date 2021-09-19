@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <title>Weather Dashboard</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <title id="title">Weather Dashboard</title>
 </head>
 
 
@@ -93,9 +93,10 @@
 			let country = data['sys']['country'];
 			
 			var sunrise = data['sys']['sunrise'];
-			var sunrise = Date(sunrise);
+			var sunrise = new Date(sunrise * 1000);
+
 			var sunset = data['sys']['sunset'];
-			var sunset = Date(sunset);
+			var sunset = new Date(sunset * 1000);
 
 			let weatherDesc = data['weather'][0]['description'];
 			
@@ -107,11 +108,21 @@
 			let humidity = data['main']['humidity'];
 			let windSpeed = data['wind']['speed'];
 
+			// When data was calculated. ie. last updated
+			let dt = data['dt'];
+
+			// UTC Timezone
+			var timezone = data['timezone'];
+			var timezonme = timezone / 360;
+
 			document.getElementById('dashboard-greeting').innerHTML = cityName;
+			document.getElementById('title').innerHTML = `${cityName} | Weather Dashboard`;
 			console.log(data);
 			console.log(cityName);
 			console.log(sunrise);
+			console.log(sunset);
 			console.log(weatherDesc);
+			console.log(country);
 		}
 		else {
 			// hide grid and show button saying city was set wrong

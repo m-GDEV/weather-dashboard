@@ -44,3 +44,4 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 - Humidity (not sure what this value represents exactly)
 - Feels like
 - Wind speed
+- Timezone
