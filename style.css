@@ -1,11 +1,10 @@
+* { padding: 0; margin: 0; }
+
 :root {
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-family: helvetica, arial;
-  box-sizing: border-box;
-  -moz-box-sizing:border-box;
-  overflow: hidden;
 }
 
 @media (max-width: 700px) {
@@ -25,7 +24,7 @@
 
 body {
 	background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-  height: 94vh;
+  height: 100%;
 }
 
 .top-nav {
@@ -54,11 +53,12 @@ body {
   margin-top: 4rem;
 }
 
-h1 {
-	font-size: 5rem;
-	color: white;
-	font-family: helvetica, arial;
-	text-align: center;
+#home-greeting {
+  font-size: 5rem;
+  color: white;
+  font-family: helvetica, arial;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 #search {
@@ -82,7 +82,18 @@ input:focus {
 }
 
 #dashboard-greeting {
-  margin-bottom: 4rem;
+	font-size: 3.5rem;
+	color: white;
+	font-family: helvetica, arial;
+	text-align: center;
+  margin: 1rem 0rem 0rem 0.5rem;
+}
+
+#location-info {
+  font-size: 1.5rem;
+	color: white;
+	font-family: helvetica, arial;
+	text-align: center;
 }
 
 #invalid-wrapper {
@@ -92,35 +103,45 @@ input:focus {
   height: 60vh;
 }
 
-#invalid-button, #invalid-button a {
-  text-decoration: none;
+#invalid-button{
   padding: 2rem;
   margin-top: 2rem;
   background-color: purple;
-  color: white;
-  font-size: 2rem;
   border-radius: 2rem;
   border: none;
   
 }
 
+#invalid-button a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+
 .grid {
   display: grid;
   border: 1px solid white;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 2rem;
   box-sizing: border-box;
 }
 
-.grid-item {
- color: blue; 
+.stat-heading {
+  margin-bottom: 1rem;
 }
+
+.stat-info {
+  margin-bottom: 0.5rem;
+  
+}
+
+/* Don't assign height! Grid item will adjust height based on amount of items in grid-item */
 
 .stat-section {
   background-color: #141311;
   color: white;
   /*width: 30rem;*/
-  height: 10rem;
+  /* height: 8rem; */
   padding: 2rem;
   margin: 0.5rem;
   border-radius: 2rem;
@@ -130,8 +151,8 @@ input:focus {
   background-color: #141311;
   color: white;
   /*width: 30rem;*/
-  height: 20rem;
-  padding: 4rem 4rem 4.5rem 4rem; /* Weird padding that aligns it with .stat-section */
+  /* height: 28.5rem; Weird thing that makes it equal to .stat-section */
+  padding: 2rem;
   margin: 0.5rem;
   border-radius: 2rem;
 }
