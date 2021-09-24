@@ -28,8 +28,18 @@
 
 
 <div class="content">
- <h1 id="home-greeting">Welcome! 👋 Please enter your city:</h1>
+
+  <h1 id="home-greeting">Welcome! 👋 Please enter your city:</h1>
   <input id="search" placeholder="Search Now" type="text" autocomplete="off" autofocus required>
+
+  <h4 class="unit-h2">Choose type of units (metric is default)</h4>
+
+  <div class="unit-grid">
+    <button onclick="setUnits('metric')">Metric</button>
+    <button onclick="setUnits('farenheit')">Farenheit</button>
+    <button onclick="setUnits('standard')">Standard</button>
+  </div>
+
 </div>
 
 
@@ -44,13 +54,25 @@ document.getElementById('search').onkeydown = function(e){
    if(e.keyCode == 13){
 // get value of input and assign it to city var
      let city = document.getElementById('search').value;
-// store city var in local storage
-    localStorage.setItem("city", `${city}`);
-    console.log(localStorage.getItem("city"));
-// navigate to dashboard page
-     document.location.href = "pages/dashboard.html";
+     // If city input is empty do not navigate to dashboard
+     if (city === "") {
+       alert("Please enter a City.");
+      }
+     else {
+    // store city var in local storage
+        localStorage.setItem("city", `${city}`);
+        console.log(localStorage.getItem("city"));
+    // navigate to dashboard page
+        document.location.href = "pages/dashboard.html";
+     }
    }
 };
+
+function setUnits(units) {
+  localStorage.setItem("units", units)
+}
+
+
 </script>
 
 </html>

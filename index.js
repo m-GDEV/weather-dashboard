@@ -1,14 +1,28 @@
+"use strict"
+
 // needed vars
 let apiKey = "582eaef8fa88ead22261302ca8720f2b"
 let city = localStorage.getItem("city");
-let units = "metric"
+
+// Measurement Units
+let units
+if (localStorage.getItem('units') != 'null')
+{units = localStorage.getItem('units');}
+else {units = "metric";} 
+
+let unitSymbol;
+if (units === "metric") {unitSymbol = "°C";}
+else if (units === "farenheit") {unitSymbol = "°C";}
+else if (units === "standard") {unitSymbol = "K";}
+
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
 // document.getElementById('dashboard-greeting').innerHTML = city;
 
 
 async function get_stat (url) {
 	// GET http request
-	let response = await fetch('../test.json');
+	// let response = await fetch('../test.json');
+	let response = await fetch(url);
 
 	if (response.status == 200) {
 		let data = await response.json();
@@ -16,11 +30,11 @@ async function get_stat (url) {
 		let cityName = data['name'];
 		let country = data['sys']['country'];
 		
-		var sunrise = data['sys']['sunrise'];
-		var sunrise = new Date(sunrise * 1000);
+		let sunrise = data['sys']['sunrise'];
+		sunrise = new Date(sunrise * 1000);
 
-		var sunset = data['sys']['sunset'];
-		var sunset = new Date(sunset * 1000);
+		let sunset = data['sys']['sunset'];
+		sunset = new Date(sunset * 1000);
 
 		let weatherDesc = data['weather'][0]['description'];
 		
@@ -34,21 +48,28 @@ async function get_stat (url) {
 		let windSpeed = data['wind']['speed'];
 
 		// When data was calculated. ie. last updated
-		var dt = data['dt'];
-		var dt = new Date(dt * 1000);
+		let dt = data['dt'];
+		dt = new Date(dt * 1000);
 
 		// UTC Timezone
-		var timezone = data['timezone'];
-		var timezone = timezone / 3600;
+		let timezone = data['timezone'];
+		timezone = timezone / 3600;
 		if (timezone > 0) {timezone = `+ ${timezone}`;}
 
-		// Change H1 and title of document
+		// Changing values of many document elements
+
+		// Changing H1 and subheading on dashboard
 		document.getElementById('dashboard-greeting').innerHTML = cityName;
+		document.getElementById('location-info').innerHTML = `${cityName}, ${country} | UTC ${timezone}`;
+		
+		// Updating title to include city name
 		document.getElementById('title').innerHTML = `${cityName} | Weather Dashboard`;
 
-		document.getElementById('location-info').innerHTML = `${cityName}, ${country} | UTC ${timezone}`;
-
-		document.getElementById('temp').innerHTML = `Current Temp: ${temp}`;
+		// Changing Temperatures
+		document.getElementById('temp').innerHTML = `${temp} ${unitSymbol}`;
+		document.getElementById('feelsLike').innerHTML = `Feels Like: ${feelsLike} ${unitSymbol}`;
+		document.getElementById('tempHigh').innerHTML = `🔼 High: ${tempHigh} ${unitSymbol}`;
+		document.getElementById('tempLow').innerHTML = `🔽 Low: ${tempLow} ${unitSymbol}`;
 
 		console.log(data);
 		console.log(cityName);

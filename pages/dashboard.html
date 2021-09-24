@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="../style.css">
-  <script src="../main.js" type="text/javascript"></script>
+  <script src="../index.js" type="text/javascript"></script>
 
   <link rel="shortcut icon" href="../images/favicon.ico">
   <title id="title">Weather Dashboard</title>
@@ -28,8 +28,8 @@
   </nav>
 
 
-<h1 id="dashboard-greeting">Loading...</h1>
-<p id="location-info">Loading...</p>
+<h1 id="dashboard-greeting">City</h1>
+<p id="location-info">Additional Info</p>
 
 
 <div id="invalid-wrapper">
@@ -42,11 +42,11 @@
 	<div class="grid-item">
 
   		<div class="stat-section">
-			<h2 class="stat-heading"> Termperature </h2>
-			<p class="stat-info" id="temp">Loading...</p>
-			<p class="stat-info" id="feelsLike"> Feels Like: </p>
-			<p class="stat-info" id="tempHigh"> Temp High: </p>
-			<p class="stat-info" id="tempLow"> Temp Low: </p>
+			<h2 class="stat-heading">⛅ Temperature </h2>
+			<p class="stat-info">Current Temp: <span id="temp" class="info-text"></span></p>
+			<p class="stat-info" id="feelsLike">Feels Like: </p>
+			<p class="stat-info" id="tempHigh">High: </p>
+			<p class="stat-info" id="tempLow">Temp Low: </p>
   		</div>
 
   		<div class="stat-section">
