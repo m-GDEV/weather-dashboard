@@ -8,6 +8,8 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="shortcut icon" href="images/favicon.ico">
+  <script async defer data-domain="m-gdev.github.io" src="https://analytics.connectwithmusa.com/js/plausible.js"></script>
+
 
   <title>Weather Dashboard</title>
 </head>
@@ -32,13 +34,15 @@
   <h1 id="home-greeting">Welcome! 👋 Please enter your city:</h1>
   <input id="search" placeholder="Search Now" type="text" autocomplete="off" autofocus required>
 
-  <h4 class="unit-h2">Choose type of units (metric is default)</h4>
+  <h4 class="unit-heading">Choose type of units</h4>
 
-  <div class="unit-grid">
+  <div class="unit-buttons">
     <button onclick="setUnits('metric')">Metric</button>
     <button onclick="setUnits('farenheit')">Farenheit</button>
     <button onclick="setUnits('standard')">Standard</button>
   </div>
+
+  <p>(metric is default)</p>
 
 </div>
 
@@ -69,7 +73,8 @@ document.getElementById('search').onkeydown = function(e){
 };
 
 function setUnits(units) {
-  localStorage.setItem("units", units)
+  localStorage.setItem("units", units);
+  alert(`Set ${units} as default unit.`);
 }
 
 

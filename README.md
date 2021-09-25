@@ -8,13 +8,14 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 
 # Features
 - Uses OpenWeatherApi
-- Works with all cities in the world
+- User can select measurement unit to display info in
+- Works with all cities and countries in the world
 - Displays current temperature and humidex
-- Displays rain and winds information
+- Displays rain and wind information
 - Displays forecast for rest of day OR the next 10 days
 
 
-# Features to add
+<!-- # Features to add
 - footer
   - made with react?
   - made by musa 
@@ -44,4 +45,10 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 - Humidity (not sure what this value represents exactly)
 - Feels like
 - Wind speed
-- Timezone
+- Timezone -->
+
+
+# Planned improvments
+- Add 1 day and 10 forcast (condensing all grid items with only two columns)
+- Add a menu
+- Sunrise and Sunset times in AM and PM?

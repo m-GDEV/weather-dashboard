@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="../style.css">
-  <script src="../index.js" type="text/javascript"></script>
+  <script src="../index.min.js" type="text/javascript"></script>
+  <script async defer data-domain="m-gdev.github.io" src="https://analytics.connectwithmusa.com/js/plausible.js"></script>
+
 
   <link rel="shortcut icon" href="../images/favicon.ico">
   <title id="title">Weather Dashboard</title>
@@ -28,8 +30,8 @@
   </nav>
 
 
-<h1 id="dashboard-greeting">City</h1>
-<p id="location-info">Additional Info</p>
+<h1 id="dashboard-heading">Dashboard Heading</h1>
+<p id="weatherDesc"><img src="" style="vertical-align:middle;" width="35px" height="35px">Weather Description</p>
 
 
 <div id="invalid-wrapper">
@@ -38,36 +40,52 @@
 
 
 <div class="grid" id="grid">
+	<!-- Default info-text  -->
+	<!-- <p class="stat-info">🌡️ Current: <span id="temp" class="info-text"></span></p> -->
 
 	<div class="grid-item">
 
   		<div class="stat-section">
 			<h2 class="stat-heading">⛅ Temperature </h2>
-			<p class="stat-info">Current Temp: <span id="temp" class="info-text"></span></p>
-			<p class="stat-info" id="feelsLike">Feels Like: </p>
-			<p class="stat-info" id="tempHigh">High: </p>
-			<p class="stat-info" id="tempLow">Temp Low: </p>
+			<p class="stat-info">🌡️ Current: <span id="temp" class="info-text"></span></p>
+			<p class="stat-info">✋ Feels Like: <span id="feelsLike" class="info-text"></span></p>
+			<p class="stat-info">🔼 High: <span id="tempHigh" class="info-text"></span></p>
+			<p class="stat-info">🔽 Low: <span id="tempLow" class="info-text"></span></p>
+			<p class="stat-info">☀️ Humidity: <span id="humidity" class="info-text"></span></p>
   		</div>
 
-  		<div class="stat-section">
-			<h2 class="stat-heading"> Stat </h2>
-			<p class="stat-info"> Information </p>
-			<p class="stat-info">Information</p>
-			
-			
-  		</div>
-	
 	</div>
 
 	<div class="grid-item">
 
-		<div class="big-stat-section">
-			<h2 class="stat-heading"> Stat </h2>
-			<p class="stat-info"> Big stat! </p>
-		</div>
+		<div class="stat-section">
+			<h2 class="stat-heading">💨 Wind</h2>
+			<p class="stat-info">🍃 Wind Speed: <span id="windSpeed" class="info-text"></span></p>
+			<p class="stat-info">🌬️ Wind Gust: <span id="windGust" class="info-text"></span></p>
+			<p class="stat-info">🎯 Wind Direction: <span id="windDir" class="info-text"></span></p>
+			<p class="info-text" id="speedSpec">Loading...</p>
+			
+  		</div>
+
 	</div>
 
+	<div class="grid-item">
+
+		<div class="stat-section">
+			<h2 class="stat-heading">🌅 Sunrise & 🌇 Sunset</h2>
+			<p class="stat-info">🌅 Sunrise: <span id="sunrise" class="info-text"></span></p>
+			<p class="stat-info">🌇 Sunset: <span id="sunset" class="info-text"></span></p>
+  		</div>
+
+	</div>
+
+
+	
 </div>
+
+<!-- PUT THIS AT THE END OF DOCUMENT -->
+<h4 id="lastUpdated">If page does not load, please file an issue on <a href="https://github.com/m-GDEV/weather-dashboard">Github</a></h4>
+
 
 
 </body>
