@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="shortcut icon" href="images/favicon.ico">
-  <script async defer data-domain="m-gdev.github.io" src="https://analytics.connectwithmusa.com/js/plausible.js"></script>
+  <!-- <script async defer data-domain="m-gdev.github.io" src="https://analytics.connectwithmusa.com/js/plausible.js"></script> -->
 
 
   <title>Weather Dashboard</title>
@@ -16,16 +16,18 @@
 
 <body>
  
-  <nav>
-    <ul class="top-nav">
-      <!-- <li class="nav-item"><img src="https://connectwithmusa.com/images/whoami/me.webp" width="30px" height="30px"></li> -->
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-    </ul>
-  </nav>
+	<div class="nav-hamburger-wrap">
+    <button class="nav-hamburger" onclick="toggleNav()"><img src="../images/hamburger.svg" width="20rem" height="20rem"></button>
+    </div>
+  
+      <nav>
+          <ul class="base-flexbox nav" id="nav">
+              <li><a href="../index.html"><img src="../images/weatherIcon.svg" width="50px" height="50px"></a></li>
+              <li class="nav-item"><a href="pages/about.html">About</a></li>
+              <li><button class="nav-button popcity"><a href="pages/popularcities.html">Popular Cities</a></button></li>
+              <li><button class="nav-button chgcity"><a href="index.html">Change City</a></button></li>
+          </ul>
+      </nav>
 
 
 
@@ -75,8 +77,18 @@ document.getElementById('search').onkeydown = function(e){
 function setUnits(units) {
   localStorage.setItem("units", units);
   alert(`Set ${units} as default unit.`);
+  
 }
 
+// Function to toggle nav, invoked by hamburger button
+function toggleNav() {
+    let x = document.getElementById('nav');
+    if ( window.getComputedStyle(x).getPropertyValue("display") === 'none') {
+        x.style.display = 'flex';
+    } else {
+        x.style.display = 'none';
+    }
+  }
 
 </script>
 

@@ -7,48 +7,59 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 
 
 # Features
-- Uses OpenWeatherApi
+- Uses **OpenWeatherApi**
 - User can select measurement unit to display info in
-- Works with all cities and countries in the world
+- Works with ***all*** cities and countries in the world
 - Displays current temperature and humidex
-- Displays rain and wind information
-- Displays forecast for rest of day OR the next 10 days
+- Displays wind information
+- Displays sunrise and sunset times
+<!-- - Displays forecast for rest of day OR the next 10 days | THIS IS A WORK IN PROGRESS, CHECK PLANNED IMPROVEMENTS-->
 
-
-<!-- # Features to add
-- footer
-  - made with react?
-  - made by musa 
-- header 
-  - logo
-  - popular cities
-  - about
-  - contact
-- dashboard page
-  - h1 that says weather dashboard
-  - info card
-    - cur temp
-    - humidex/feels like
-    - rain
-    - wind
-  - tabbed section with forecast for day OR forecst for next 10 days
-  - switch between farenheit and celsius
-
-
-# Weather Stats to include
+# Deatailed Weather Stats included
 - City name
 - Country
-- Sunrise & Sunset
-- Current weather (clear sky, cloudy etc.)
+- Timezone
+- Weather Description (clear sky, cloudy etc.)
 - Current temp
 - Temp high & low
-- Humidity (not sure what this value represents exactly)
 - Feels like
+- Humidity
 - Wind speed
-- Timezone -->
-
+- Sunrise & Sunset
 
 # Planned improvments
-- Add 1 day and 10 forcast (condensing all grid items with only two columns)
-- Add a menu
+
+### In-Progress:
+- Add 1 day OR 10 forcast, tabbed section (condensing all grid items into only two columns)
+- Add a header and footer menus
 - Sunrise and Sunset times in AM and PM?
+- Format last updated info more nicely 
+- Make links not .html (make each page a dir and name the page index.html)
+- Give user ability to auto get location through browser (geolocation api)
+- Add search/submit button on homepage
+
+- Footer
+  - made by musa 
+  - github link asking for star
+
+- Header 
+  - logo
+  - about
+  - popular cities
+  - change city
+
+### Done:
+- Dashboard Page
+  - h1 with city info
+  - info cards
+    - temp, humidity, feels like, high, low
+    - wind
+    - sunrise & sunset times
+
+- General
+  - switch between farenheit and celsius
+
+# Addtional Info
+- This website uses **cookies** to remember the user's selected city, this information is only stored locally
+- This website uses the privacy respected, open source analytics tracker: **Plausible Analytics**
+- This project uses the **GPL 3.0** License

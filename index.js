@@ -92,8 +92,6 @@ async function get_stat (url) {
 		let lastUpdated = data['dt'];
 		lastUpdated = new Date(lastUpdated * 1000);
 
-
-		
 		// -- Inserting returned values from api into document --
 		
 		// Updating title to include city name
@@ -144,8 +142,23 @@ async function get_stat (url) {
 		}
 
 		document.location.href = "../index.html";
+		console.log("i wanted to tell you!")
+		console.log("hello" + 5)
+		let dd = 6 + 4;
+		console.log(dd)
 	}
 
 }
+
+// Function to toggle nav, invoked by hamburger button
+function toggleNav() {
+    let x = document.getElementById('nav');
+    if ( window.getComputedStyle(x).getPropertyValue("display") === 'none') {
+        x.style.display = 'flex';
+    } else {
+        x.style.display = 'none';
+    }
+  }
+
 
 get_stat(url);

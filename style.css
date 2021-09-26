@@ -1,4 +1,6 @@
-/* Applies to all pages: */
+/* --- Applies to all pages: --- */
+
+/* Boilerplate */
 * { padding: 0; margin: 0; }
 
 :root {
@@ -11,45 +13,65 @@
   color: white;
 }
 
-@media (max-width: 900px) {
-  :root {
-    font-size: 12px;
-  }
-  .nav-item {
-    display: none;
-  }
-}
-
-@media (max-width: 350px) {
-  :root {
-    font-size: 10px;
-  }
-}
-
+/* Re-used classes */
 .base-flexbox {
   display: flex;
-  justify-content: center;
-}
-
-.top-nav {
-  /*border: 1px solid black;*/
-  display: none; /* Should be flex, change when you need it */
-  flex-direction: row;
   align-items: center;
+}
+
+/* --- Top Nav --- */
+
+.nav-hamburger-wrap {
+  display: none;
+  align-items: center;
+  justify-content: left;
+  margin: 1rem;
+}
+
+.nav-hamburger {
+  background-color: transparent;
+  border: none;
+}
+
+.nav {
+  list-style: none;
+  margin: 1rem;
   justify-content: center;
 }
 
-.nav-item,
+.nav-item {
+  margin: 0 1.5rem;
+}
+
 .nav-item a {
   text-decoration: none;
-  list-style: none;
-  color: #D16BA5;
-  /*border: 1px solid blue;*/
-  margin: 1rem;
-  font-size: 1.25rem;
+  color: white;
 }
 
-/* Homepage */
+.nav-button {
+  padding: 0.5rem 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.nav-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.popcity {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #464dce;
+}
+
+.chgcity {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #e88f02;
+}
+
+/* --- Homepage --- */
 .content {
   display: flex;
   justify-content: center;
@@ -72,7 +94,6 @@
   border: none;
   background-color: lightblue;
   border-radius: 0.5rem;
-  /*width: 14rem;*/
   height: 2rem;
   padding: 1rem;
 }
@@ -103,8 +124,7 @@ input:focus {
   border-radius: 8px;
 }
 
-
-/* Dashboard */
+/* --- Dashboard --- */
 #dashboard-heading {
 	font-size: 3rem;
 	text-align: center;
@@ -126,7 +146,7 @@ input:focus {
 #invalid-button {
   padding: 2rem;
   margin-top: 2rem;
-  background-color: purple;
+  background-color: blueviolet;
   border-radius: 2rem;
   border: none;
 }
@@ -139,7 +159,7 @@ input:focus {
 
 .grid {
   display: grid;
-  border: 1px solid white;
+  border: none;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 2rem 5rem;
 }
@@ -170,4 +190,27 @@ input:focus {
 
 #lastUpdated {
   text-align: center;
+}
+
+/* --- Media Queries --- */
+/* MEDIA QUERIES ONLY WORK AFTER YOU DECLARE THE CLASS, CSS GOES WITH THE LAST ASSIGNED VALUE */
+@media (max-width: 900px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-hamburger-wrap {
+    display: flex;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  :root {
+    font-size: 10px;
+  }
 }

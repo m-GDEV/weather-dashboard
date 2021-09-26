@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="../style.css">
-  <script src="../index.min.js" type="text/javascript"></script>
-  <script async defer data-domain="m-gdev.github.io" src="https://analytics.connectwithmusa.com/js/plausible.js"></script>
+  <script src="../index.js" type="text/javascript"></script>
+  <!-- <script async defer data-domain="m-gdev.github.io" src="https://analytics.connectwithmusa.com/js/plausible.js"></script> -->
 
 
   <link rel="shortcut icon" href="../images/favicon.ico">
@@ -18,16 +18,18 @@
 
 <body>
  
-  <nav>
-    <ul class="top-nav">
-      <!-- <li class="nav-item"><img src="https://connectwithmusa.com/images/whoami/me.webp" width="30px" height="30px"></li> -->
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-      <li class="nav-item"><a href="3">Home</a></li>
-    </ul>
-  </nav>
+	<div class="nav-hamburger-wrap">
+	<button class="nav-hamburger" onclick="toggleNav()"><img src="../images/hamburger.svg" width="20rem" height="20rem"></button>
+	</div>
+
+    <nav>
+        <ul class="base-flexbox nav" id="nav">
+            <li><a href="../index.html"><img src="../images/weatherIcon.svg" width="50px" height="50px"></a></li>
+            <li class="nav-item"><a href="pages/about.html">About</a></li>
+            <li><button class="nav-button popcity"><a href="pages/popularcities.html">Popular Cities</a></button></li>
+            <li><button class="nav-button chgcity"><a href="index.html">Change City</a></button></li>
+        </ul>
+    </nav>
 
 
 <h1 id="dashboard-heading">Dashboard Heading</h1>
