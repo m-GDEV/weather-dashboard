@@ -3,17 +3,17 @@
     "name": "Weather Dashboard",
     "icons": [
       {
-        "src": "/images/icons/android-chrome-192x192.png",
+        "src": "images/icons/android-chrome-192x192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/images/icons/android-chrome-512x512.png",
+        "src": "images/icons/android-chrome-512x512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
     ],
-    "start_url": "/pages/dashboard/",
+    "start_url": "pages/dashboard/",
     "background_color": "#8aa7ec",
     "display": "standalone",
     "scope": "/",
@@ -22,33 +22,33 @@
       {
         "name": "Dashboard",
         "description": "A weather dashboard for your selected city.",
-        "url": "/pages/dashboard/"
+        "url": "pages/dashboard/"
       },
       {
         "name": "Change City",
         "description": "Change your selected city.",
-        "url": "/pages/change-city/"
+        "url": "pages/change-city/"
       },
       {
         "name": "Popular Cities",
         "description": "Weather infomation on popular cities around the world.",
-        "url": "/pages/popular-cities/"
+        "url": "pages/popular-cities/"
       },
       {
         "name": "About",
         "description": "About this project.",
-        "url": "/pages/about/"
+        "url": "pages/about/"
       }
     ],
     "description": "A simple, clutter-free, privacy-respecting weather dashboard.",
     "screenshots": [
       {
-        "src": "/images/screenshots/home.png",
+        "src": "images/screenshots/home.png",
         "type": "image/png",
         "sizes": "400x800"
       },
       {
-        "src": "/images/screenshots/dashboard.png",
+        "src": "images/screenshots/dashboard.png",
         "type": "image/png",
         "sizes": "400x800"
       }

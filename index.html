@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A Simple mobile-friendly weather dashboard. Made with OpenWeather Api.">
 
-  <link rel="stylesheet" type="text/css" href="/style.css">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="shortcut icon" href="/images/icons/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="images/icons/favicon.ico">
   <script async defer data-domain="m-gdev.github.io/weather-dashboard" src="https://analytics.connectwithmusa.com/js/plausible.js"></script>
 
 
@@ -19,14 +19,14 @@
 <body>
  
 	<div class="nav-hamburger-wrap">
-    <button class="nav-hamburger" onclick="toggleNav()"><img src="/images/hamburger.svg" width="20rem" height="20rem"></button>
+    <button class="nav-hamburger" onclick="toggleNav()"><img src="images/hamburger.svg" width="20rem" height="20rem"></button>
     </div>
   
       <nav>
           <ul class="base-flexbox nav" id="nav">
-              <li><a href="/pages/dashboard/"><img src="/images/icons/android-chrome-192x192.png" width="50px" height="50px"></a></li>
-              <li class="nav-item"><a href="/pages/about.html">About</a></li>
-              <li><button class="nav-button popcity"><a href="/pages/popularcities.html">Popular Cities</a></button></li>
+              <li><a href="pages/dashboard/"><img src="images/icons/android-chrome-192x192.png" width="50px" height="50px"></a></li>
+              <li class="nav-item"><a href="pages/about.html">About</a></li>
+              <li><button class="nav-button popcity"><a href="pages/popularcities.html">Popular Cities</a></button></li>
               <li><button class="nav-button chgcity"><a href="#">Change City</a></button></li>
           </ul>
       </nav>
@@ -71,7 +71,7 @@ document.getElementById('search').onkeydown = function(e){
         localStorage.setItem("city", `${city}`);
         console.log(localStorage.getItem("city"));
     // navigate to dashboard page
-        document.location.href = "/pages/dashboard/";
+        document.location.href = "pages/dashboard/";
      }
    }
 };

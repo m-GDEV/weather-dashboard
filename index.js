@@ -142,7 +142,7 @@ async function get_stat (url) {
 			await new Promise(r => setTimeout(r, 1000));
 		}
 
-		document.location.href = "/";
+		document.location.href = "index.html";
 	}
 
 }
