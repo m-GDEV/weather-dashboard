@@ -45,12 +45,12 @@
       {
         "src": "images/screenshots/home.png",
         "type": "image/png",
-        "sizes": "400x800"
+        "sizes": "400x799"
       },
       {
         "src": "images/screenshots/dashboard.png",
         "type": "image/png",
-        "sizes": "400x800"
+        "sizes": "400x799"
       }
     ]
   }
