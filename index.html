@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="manifest" href="manifest.json">
+  <script src="index.js" type="text/javascript"></script>
   <link rel="shortcut icon" href="images/icons/favicon.ico">
   <script async defer data-domain="m-gdev.github.io/weather-dashboard" src="https://analytics.connectwithmusa.com/js/plausible.js"></script>
 
@@ -24,7 +25,7 @@
   
       <nav>
           <ul class="base-flexbox nav" id="nav">
-              <li><a href="pages/dashboard/"><img src="images/icons/android-chrome-192x192.png" width="50px" height="50px"></a></li>
+              <li><a href=""><img src="images/icons/android-chrome-192x192.png" width="50px" height="50px"></a></li>
               <li class="nav-item"><a href="pages/about.html">About</a></li>
               <li><button class="nav-button popcity"><a href="pages/popularcities.html">Popular Cities</a></button></li>
               <li><button class="nav-button chgcity"><a href="#">Change City</a></button></li>
@@ -57,41 +58,24 @@
 </body>
 
 <script>
-// if enter key is pressed do:
+// --- Handling user input and only routing to dashboard if input is not empty ---
 document.getElementById('search').onkeydown = function(e){
-   if(e.keyCode == 13){
-// get value of input and assign it to city var
-     let city = document.getElementById('search').value;
-     // If city input is empty do not navigate to dashboard
-     if (city === "") {
-       alert("Please enter a City.");
-      }
-     else {
-    // store city var in local storage
-        localStorage.setItem("city", `${city}`);
-        console.log(localStorage.getItem("city"));
-    // navigate to dashboard page
-        document.location.href = "pages/dashboard/";
-     }
-   }
-};
-
-function setUnits(units) {
-  localStorage.setItem("units", units);
-  alert(`Set ${units} as default unit.`);
-  
-}
-
-// Function to toggle nav, invoked by hamburger button
-function toggleNav() {
-    let x = document.getElementById('nav');
-    if ( window.getComputedStyle(x).getPropertyValue("display") === 'none') {
-        x.style.display = 'flex';
-    } else {
-        x.style.display = 'none';
-    }
-  }
-
+	if(e.keyCode == 13){
+ // get value of input and assign it to city var
+	  let city = document.getElementById('search').value;
+	  // If city input is empty do not navigate to dashboard
+	  if (city === "") {
+		alert("Please enter a City.");
+	   }
+	  else {
+	 // store city var in local storage
+		 localStorage.setItem("city", `${city}`);
+		 console.log(localStorage.getItem("city"));
+	 // navigate to dashboard page
+		 document.location.href = "pages/dashboard/";
+	  }
+	}
+ };
 </script>
 
 </html>

@@ -122,6 +122,8 @@ async function get_stat (url) {
 		document.getElementById('lastUpdated').innerHTML = `🕑 Last Updated: ${lastUpdated}`;
 
 		console.log(data);
+		var fileName = location.href.split("/").slice(-1); 
+		console.log(fileName);
 	}
 	
 	// If response status is not 200 (OK) then show an error message and redirect to homepage
@@ -147,7 +149,7 @@ async function get_stat (url) {
 
 }
 
-// Function to toggle nav, invoked by hamburger button
+// --- Function to toggle nav, invoked by hamburger button ---
 function toggleNav() {
     let x = document.getElementById('nav');
     if ( window.getComputedStyle(x).getPropertyValue("display") === 'none') {
@@ -157,5 +159,30 @@ function toggleNav() {
     }
   }
 
+  // --- Function to set units based on user input, invoked by button ---
+ function setUnits(units) {
+   localStorage.setItem("units", units);
+   alert(`Set ${units} as default unit.`);
+   
+ }
+ 
+ // --- Function to toggle nav, invoked by hamburger button ---
+ function toggleNav() {
+	 let x = document.getElementById('nav');
+	 if ( window.getComputedStyle(x).getPropertyValue("display") === 'none') {
+		 x.style.display = 'flex';
+	 } else {
+		 x.style.display = 'none';
+	 }
+   }
+ 
+// --- Only getting stats if on dashboard page ---
+if (window.location.pathname === "/pages/dashboard/") {get_stat(url)}
 
-get_stat(url);
+// --- Service worker for PWA stuff ---
+window.addEventListener('load', () => {
+	if ('serviceWorker' in navigator) {
+	  navigator.serviceWorker.register('/service-worker.js');
+	}
+  });
+  
