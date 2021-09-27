@@ -182,7 +182,7 @@ if (window.location.pathname === "/weather-dashboard/pages/dashboard/") {get_sta
 // --- Service worker for PWA stuff ---
 window.addEventListener('load', () => {
 	if ('serviceWorker' in navigator) {
-	  navigator.serviceWorker.register('/service-worker.js');
+	  navigator.serviceWorker.register('/weather-dashboard/service-worker.js');
 	}
   });
   
