@@ -37,6 +37,7 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 - Make links not .html (make each page a dir and name the page index.html)
 - Give user ability to auto get location through browser (geolocation api)
 - Add search/submit button on homepage
+- 
 
 - Footer
   - made by musa 
@@ -58,6 +59,9 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 
 - General
   - switch between farenheit and celsius
+
+# Changelog / Fixes
+- Fix image src for header on index.html
 
 # Addtional Info
 - This website uses **cookies** to remember the user's selected city, this information is only stored locally

@@ -25,7 +25,7 @@ async function get_stat (url) {
 
 	// -- Getting information from api (in order of use in document) --
 	let response = await fetch(url);
-	// let response = await fetch('../test.json');
+	// let response = await fetch('/misc/test.json');
 
 	if (response.status == 200) {
 		let data = await response.json();
@@ -131,6 +131,7 @@ async function get_stat (url) {
 		document.getElementById("weatherDesc").style.display = "none";
 		document.getElementById('lastUpdated').style.display = "none";
 		document.getElementById('dashboard-heading').style.color = "red";
+		document.getElementById('dashboard-heading').style.textDecoration = "underline";
 		document.getElementById('dashboard-heading').innerHTML = "Error, invalid city specified.";
 		document.getElementById('invalid-wrapper').style.display = "flex";
 		console.log(`Error! ${response.status}`);
@@ -141,11 +142,7 @@ async function get_stat (url) {
 			await new Promise(r => setTimeout(r, 1000));
 		}
 
-		document.location.href = "../index.html";
-		console.log("i wanted to tell you!")
-		console.log("hello" + 5)
-		let dd = 6 + 4;
-		console.log(dd)
+		document.location.href = "/";
 	}
 
 }
