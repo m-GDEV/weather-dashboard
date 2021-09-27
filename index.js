@@ -180,8 +180,10 @@ function toggleNav() {
 if (window.location.pathname === "/weather-dashboard/pages/dashboard/") {get_stat(url)}
 
 // --- Service worker for PWA stuff ---
+// Checkes if browser supports service worker, if so, it registers it
 window.addEventListener('load', () => {
 	if ('serviceWorker' in navigator) {
+		// Using absolute path because it needs to be started on any page
 	  navigator.serviceWorker.register('/weather-dashboard/service-worker.js');
 	}
   });

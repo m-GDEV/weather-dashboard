@@ -1,3 +1,2 @@
-.vscode
-images/icons.zip
-misc/test.json
+./.vscode
+./misc

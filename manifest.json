@@ -1,23 +1,38 @@
 {
     "short_name": "Weather",
     "name": "Weather Dashboard",
+    "start_url": "pages/dashboard/",
+    "background_color": "#8aa7ec",
+    "display": "standalone",
+    "orientation" : "portrait",
+    "scope": ".",
+    "theme_color": "#8aa7ec",
     "icons": [
       {
         "src": "images/icons/android-chrome-192x192.png",
         "type": "image/png",
-        "sizes": "192x192"
+        "sizes": "192x192",
+        "purpose": "any"
       },
       {
         "src": "images/icons/android-chrome-512x512.png",
         "type": "image/png",
-        "sizes": "512x512"
+        "sizes": "512x512",
+        "purpose": "any"
+      },
+      {
+        "src": "images/icons/maskIcon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/icons/maskIcon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
       }
     ],
-    "start_url": "pages/dashboard/",
-    "background_color": "#8aa7ec",
-    "display": "standalone",
-    "scope": "/",
-    "theme_color": "#8aa7ec",
     "shortcuts": [
       {
         "name": "Dashboard",
@@ -45,12 +60,12 @@
       {
         "src": "images/screenshots/home.png",
         "type": "image/png",
-        "sizes": "400x799"
+        "sizes": "400x800"
       },
       {
         "src": "images/screenshots/dashboard.png",
         "type": "image/png",
-        "sizes": "400x799"
+        "sizes": "400x800"
       }
     ]
   }
