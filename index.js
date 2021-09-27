@@ -177,7 +177,7 @@ function toggleNav() {
    }
  
 // --- Only getting stats if on dashboard page ---
-if (window.location.pathname === "/pages/dashboard/") {get_stat(url)}
+if (window.location.pathname === "/weather-dashboard/pages/dashboard/") {get_stat(url)}
 
 // --- Service worker for PWA stuff ---
 window.addEventListener('load', () => {
