@@ -197,7 +197,7 @@ input:focus {
 /* MEDIA QUERIES ONLY WORK AFTER YOU DECLARE THE CLASS, CSS GOES WITH THE LAST ASSIGNED VALUE */
 @media (max-width: 900px) {
   :root {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -208,10 +208,13 @@ input:focus {
   .nav {
     display: none;
   }
-}
-
-@media (max-width: 350px) {
   :root {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
+
+/*@media (max-width: 350px) {*/
+  /*:root {*/
+    /*font-size: 10px;*/
+  /*}*/
+/*}*/
