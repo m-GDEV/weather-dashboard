@@ -5,9 +5,9 @@ This is a simple weather dashboard using HTML, CSS, and Vanilla JS.
 This project intends to simplify the process of the getting your local weather
 without having to forego your privacy in the process (ip tracking, logging etc).
 
-
 # Features
 - Uses **OpenWeatherApi**
+- Is a **PWA** [Progressive Web App](https://web.dev/progressive-web-apps/)
 - User can select measurement unit to display info in
 - Works with ***all*** cities and countries in the world
 - Displays current temperature and humidex
@@ -40,6 +40,7 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 - 
 
 - Footer
+  - includes lastupdated ??
   - made by musa 
   - github link asking for star
 
@@ -59,9 +60,6 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 
 - General
   - switch between farenheit and celsius
-
-# Changelog / Fixes
-- Fix image src for header on index.html
 
 # Addtional Info
 - This website uses **cookies** to remember the user's selected city, this information is only stored locally
