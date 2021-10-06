@@ -7,7 +7,7 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 
 # Features
 - Uses **OpenWeatherApi**
-- Is a **PWA** [Progressive Web App](https://web.dev/progressive-web-apps/)
+- Is a **PWA** ([Progressive Web App](https://web.dev/progressive-web-apps/))
 - User can select measurement unit to display info in
 - Works with ***all*** cities and countries in the world
 - Displays current temperature and humidex
@@ -27,7 +27,7 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 - Wind speed
 - Sunrise & Sunset
 
-# Planned improvments
+<!-- # Planned improvments
 
 ### In-Progress:
 - Add 1 day OR 10 forcast, tabbed section (condensing all grid items into only two columns)
@@ -59,7 +59,7 @@ without having to forego your privacy in the process (ip tracking, logging etc).
     - sunrise & sunset times
 
 - General
-  - switch between farenheit and celsius
+  - switch between farenheit and celsius -->
 
 # Addtional Info
 - This website uses **cookies** to remember the user's selected city, this information is only stored locally
