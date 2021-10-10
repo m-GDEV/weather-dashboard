@@ -99,7 +99,7 @@ async function get_stat (url) {
 		
 		// Setting Heading and subheading on dashboard and imbedding image of weatherIcon
 		document.getElementById('dashboard-heading').innerHTML = `${cityName}, ${country}`;
-		document.getElementById('weatherDesc').innerHTML = `<img src="${image}" style="vertical-align:middle;" width="35px" height="35px">${weatherDesc} · UTC ${timezone}`;
+		document.getElementById('weatherDesc').innerHTML = `<img src="${image}" style="vertical-align:middle;" width="35px" height="35px" alt="visual representation of weather description">${weatherDesc} · UTC ${timezone}`;
 
 		// Setting Temperatures
 		document.getElementById('temp').innerHTML = `${temp} ${unitSymbol}`;
@@ -120,10 +120,6 @@ async function get_stat (url) {
 
 		// Other info
 		document.getElementById('lastUpdated').innerHTML = `🕑 Last Updated: ${lastUpdated}`;
-
-		console.log(data);
-		var fileName = location.href.split("/").slice(-1); 
-		console.log(fileName);
 	}
 	
 	// If response status is not 200 (OK) then show an error message and redirect to homepage
@@ -159,27 +155,27 @@ function toggleNav() {
     }
   }
 
-  // --- Function to set units based on user input, invoked by button ---
- function setUnits(units) {
+// --- Function to set units based on user input, invoked by button ---
+function setUnits(units) {
    localStorage.setItem("units", units);
    alert(`Set ${units} as default unit.`);
-   
  }
  
- // --- Function to toggle nav, invoked by hamburger button ---
- function toggleNav() {
-	 let x = document.getElementById('nav');
-	 if ( window.getComputedStyle(x).getPropertyValue("display") === 'none') {
-		 x.style.display = 'flex';
-	 } else {
-		 x.style.display = 'none';
-	 }
+// --- Function to toggle nav, invoked by hamburger button ---
+function toggleNav() {
+	let x = document.getElementById('nav');
+	if ( window.getComputedStyle(x).getPropertyValue("display") === 'none') {
+		x.style.display = 'flex';
+	} else {
+		x.style.display = 'none';
+	}
    }
  
 // --- Only getting stats if on dashboard page ---
 if (window.location.pathname === "/weather-dashboard/pages/dashboard/") {get_stat(url)}
 
 // --- Service worker for PWA stuff ---
+
 // Checkes if browser supports service worker, if so, it registers it
 window.addEventListener('load', () => {
 	if ('serviceWorker' in navigator) {
@@ -187,4 +183,86 @@ window.addEventListener('load', () => {
 	  navigator.serviceWorker.register('/weather-dashboard/service-worker.js');
 	}
   });
-  
+
+// //  --- Notifications ---
+// // Checking browser compatibility for notification api. If it does ask user to enable them.
+// if ('Notification' in window && navigator.serviceWorker) {
+
+// 	// All cases of user-set notification acess and what to do in each case.
+// 	if (Notification.permission === "granted") {
+// 		/* do our magic */
+	
+
+// 	  } else if (Notification.permission === "blocked") {
+// 	   /* the user has previously denied push. Can't reprompt. */
+// 	   console.log("Aw, shucks.");
+
+// 	  } else {
+// 		// show a prompt to the user
+// 		Notification.requestPermission(function(status) {
+// 			console.log('Notification permission status:', status);
+// 		});
+// 	  }
+//   }
+
+// // console.log(Notification.permission);
+
+// function showNotification(i) {
+// 	if (Notification.permission == 'granted') {
+// 	  navigator.serviceWorker.getRegistration().then(function(reg) {
+// 		var options = {
+// 		  body: `${i}`,
+// 		//   icon: 'images/example.png',
+// 		//   vibrate: [100, 50, 100],
+// 		//   data: {
+// 			// dateOfArrival: Date.now(),
+// 			// primaryKey: 1
+// 		//   }
+// 		};
+// 		reg.showNotification('Hello world!', options);
+// 		// setTimeout(async function () { await new Promise(r => setTimeout(r, 2000)); });
+// 	  });
+// 	}
+//   }
+
+// // displayNotification()
+
+
+// // function showNotification(i) {
+// // 	Notification.requestPermission(function(result) {
+// // 	  if (result === 'granted') {
+// // 		navigator.serviceWorker.ready.then(function(registration) {
+// // 		  registration.showNotification('Vibration Sample', {
+// // 			body: `${i}`,
+// // 			vibrate: [200, 100, 200, 100, 200, 100, 200],
+// // 			tag: 'vibration-sample'
+// // 		  });
+// // 		});
+// // 	  }
+// // 	});
+// //   }
+
+// let i = "drip";
+// async function go(i) {
+// 	i = "dog";
+// 	showNotification(i);
+// 	await new Promise(r => setTimeout(r, 7000));
+// 	i = "cat";
+// 	showNotification(i);
+// }
+
+// go();
+/*
+Working on implementing a notification system that sends the user a notification
+of the weather every hour. Not sure how to do it yet. Using the showNotification
+function works, but it does not repect the set timer async await function I
+have setup,  figure it out :)
+Update: just tried what I did on line 248 with an immediately invoked function
+but that did not work either
+Update 2: just read online that the await thing only sleeps code in ur function
+and ig cus this is not in a fuction it just doesn't work.
+Update 3: just tried the new function and it works, the only problem to solver
+now is the issue of sending notifs when the tab is closed. ie using the service
+worker or other background service to continually check and send notifs
+aight i'm going to bed now
+*/

@@ -5,69 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>You are offline</title>
+    <title>You are offline | Weather Dashboard</title>
 
-    <!-- Inline the page's stylesheet. -->
     <style>
-      body {
-        font-family: helvetica, arial, sans-serif;
-        margin: 2em;
-      }
+    :root {
+      background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-family: helvetica, arial;
+      color: white;
+      text-align: center;
+    }
 
-      h1 {
-        font-style: italic;
-        color: #373fff;
-      }
-      
-      p {
-        margin-block: 1rem;
-      }
-      
-      button {
-        display: block;
-      }
-    </style>    
-  </head>
-  <body>
-    <h1>You are offline</h1>
-
-    <p>
-      The page will automatically reload once the connection is re-established.
-      Click the button below to try reloading manually.      
-    </p>
-    <button type="button">⤾ Reload</button>
+    h1 {
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
     
-    <!-- Inline the page's JavaScript file. -->
-    <script>
-      document.querySelector('button').addEventListener('click', () => {
-        window.location.reload();
-      });
-    
-      // Listen to changes in the network state, reload when online.
-      // This handles the case when the device is completely offline.
-      window.addEventListener('online', () => {
-        window.location.reload();
-      });
+    button {
+        border: none;
+        color: white;
+        background-color: #8aa7ec;
+        border-radius: 20px;
+        padding: 1rem 2rem;
+        font-weight: bold;
+    }
 
-      // Check if the server is responding & reload the page if it is.
-      // This handles the case when the device is online, but the server
-      // is offline or misbehaving.
-      async function checkNetworkAndReload() {
-        try {
-          const response = await fetch('.');
-          // Verify we get a valid response from the server
-          if (response.status >= 200 && response.status < 500) {
-            window.location.reload();
-            return;
-          }
-        } catch {
-          // Unable to connect to the server, ignore.
+    button:hover{
+        background-color: #d16ba5;
+
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    </style>
+
+</head>
+
+<div class="flex">
+  <h1>You are offline, please reconnect to the internet and try again.</h1>
+  <button type="button">Reload</button>
+  <p>(This page is automatically refreshing to try and reconnect. Press this button to try manually.)</p>
+</div>
+
+
+   <!-- Inline the page's JavaScript file. -->
+   <script>
+    document.querySelector('button').addEventListener('click', () => {
+      window.location.reload();
+    });
+  
+    // Listen to changes in the network state, reload when online.
+    // This handles the case when the device is completely offline.
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+
+    // Check if the server is responding & reload the page if it is.
+    // This handles the case when the device is online, but the server
+    // is offline or misbehaving.
+    async function checkNetworkAndReload() {
+      try {
+        const response = await fetch('.');
+        // Verify we get a valid response from the server
+        if (response.status >= 200 && response.status < 500) {
+          window.location.reload();
+          return;
         }
-        window.setTimeout(checkNetworkAndReload, 2500);
+      } catch {
+        // Unable to connect to the server, ignore.
       }
+      window.setTimeout(checkNetworkAndReload, 2500);
+    }
 
-      checkNetworkAndReload();
-
-    </script>
+    checkNetworkAndReload();
+  </script>
+  
   </body>
+
 </html>
