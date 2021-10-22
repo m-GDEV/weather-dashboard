@@ -5,7 +5,7 @@ This is a simple weather dashboard using HTML, CSS, and Vanilla JS.
 This project intends to simplify the process of the getting your local weather
 without having to forego your privacy in the process (ip tracking, logging etc).
 
-#### ([Check it out!](https://m-gdev.github.io/weather-dashboard/))
+### [Check it out!](https://m-gdev.github.io/weather-dashboard/)
 
 # Features
 - Uses **OpenWeatherApi**
