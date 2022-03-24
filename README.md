@@ -65,5 +65,4 @@ without having to forego your privacy in the process (ip tracking, logging etc).
 
 # Addtional Info
 - This website uses **cookies** to remember the user's selected city, this information is only stored locally
-- This website uses the privacy respected, open source analytics tracker: **Plausible Analytics**
 - This project uses the **GPL 3.0** License
