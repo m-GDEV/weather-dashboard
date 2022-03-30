@@ -1,68 +1,45 @@
-# Weather Dashboard
+<!-- # Github Project Template -->
 
-This is a simple weather dashboard using HTML, CSS, and Vanilla JS.
+# ⛅ Weather Dashboard
+ ![In development?](https://img.shields.io/badge/-Not%20In%20Development-red?style=flatsquare) ![Website up?](https://img.shields.io/website.svg?down_color=red&down_message=down&up_color=green&up_message=up&url=https%3A%2F%2Fm-gdev.github.io%2Fweather-dashboard%2F) <br>
+This is a simple weather dashboard using HTML, CSS, and Vanilla JS. You can find a live demo [here](https://m-gdev.github.io/weather-dashboard/).
 
-This project intends to simplify the process of the getting your local weather
-without having to forego your privacy in the process (ip tracking, logging etc).
+#### Table of Contents
+* [Screenshot](#screenshot)
+* [Why I Created this Project](#why-i-created-this-project)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [How to Run the Project](#how-to-run-the-project)
+* [Contact](#contact)
+* [License](#license) 
 
-### *[Check it out!](https://m-gdev.github.io/weather-dashboard/)*
+## Screenshot
+![Project Screenshot](https://connectwithmusa.com/images/site_preview.webp)
 
-# Features
-- Uses **OpenWeatherApi**
-- Is a **PWA** ([Progressive Web App](https://web.dev/progressive-web-apps/))
+## Why I Created this Project
+I created this project to simplify the process of the getting your local weather without having to forego your privacy in the process (ip tracking, logging etc). I was inspired to create this project as a way to get my feet wet in the realm of web development. Futhermore, I built this to solve my own personal problem of wanting a lightweight, bloat-free, and fast weather app which is exactly what I did with the help of the Progressive Web App technology.
+
+## Technologies Used
+- 🍰 Vanilla JS for fetching weather information
+- ☁️ OpenWeatherAPI for up-to-date weather information
+- 📱 Progressive Web App for a mobile-friendly experience
+
+## Features
 - User can select measurement unit to display info in
 - Works with ***all*** cities and countries in the world
 - Displays current temperature and humidex
 - Displays wind information
 - Displays sunrise and sunset times
-<!-- - Displays forecast for rest of day OR the next 10 days | THIS IS A WORK IN PROGRESS, CHECK PLANNED IMPROVEMENTS-->
-
-# Deatailed Weather Stats included
-- City name
-- Country
-- Timezone
-- Weather Description (clear sky, cloudy etc.)
-- Current temp
-- Temp high & low
-- Feels like
-- Humidity
-- Wind speed
-- Sunrise & Sunset
-
-<!-- # Planned improvments
-
-### In-Progress:
-- Add 1 day OR 10 forcast, tabbed section (condensing all grid items into only two columns)
-- Add a header and footer menus
-- Sunrise and Sunset times in AM and PM?
-- Format last updated info more nicely 
-- Make links not .html (make each page a dir and name the page index.html)
-- Give user ability to auto get location through browser (geolocation api)
-- Add search/submit button on homepage
-- 
-
-- Footer
-  - includes lastupdated ??
-  - made by musa 
-  - github link asking for star
-
-- Header 
-  - logo
-  - about
-  - popular cities
-  - change city
-
-### Done:
-- Dashboard Page
-  - h1 with city info
-  - info cards
-    - temp, humidity, feels like, high, low
-    - wind
-    - sunrise & sunset times
-
-- General
-  - switch between farenheit and celsius -->
-
-# Addtional Info
 - This website uses **cookies** to remember the user's selected city, this information is only stored locally
-- This project uses the **GPL 3.0** License
+
+## How to Run the Project
+Clone the repository and then run the following commands in the directory:
+```bash
+python -m http.server 8000 # you can change 8000 to any port
+```
+
+## Contact
+Created by [Musa Ahmed](https://github.com/m-GDEV). Check out my website: <https://connectiwthmusa.com>
+
+## License
+This project is open source and available under the [GNU GPLv3 License](https://choosealicense.com/licenses/gpl-3.0/).
