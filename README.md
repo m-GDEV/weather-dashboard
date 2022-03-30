@@ -14,7 +14,7 @@ This is a simple weather dashboard using HTML, CSS, and Vanilla JS. You can find
 * [License](#license) 
 
 ## Screenshot
-![Project Screenshot](https://connectwithmusa.com/images/site_preview.webp)
+![Project Screenshot](https://i.imgur.com/TInvFkD.png)
 
 ## Why I Created this Project
 I created this project to simplify the process of the getting your local weather without having to forego your privacy in the process (ip tracking, logging etc). I was inspired to create this project as a way to get my feet wet in the realm of web development. Futhermore, I built this to solve my own personal problem of wanting a lightweight, bloat-free, and fast weather app which is exactly what I did with the help of the Progressive Web App technology.
